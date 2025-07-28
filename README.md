@@ -1,38 +1,36 @@
-# Online-HMER-Using-CNN-and-Bi-GRU-Networks
+# 🧠 Online Handwritten Mathematical Expression Recognition (HMER) using CNN and Bi-GRU Networks
 
-This project focuses on solving the challenging task of recognizing handwritten mathematical expressions in an online setting (i.e., input received as pen stroke sequences or image inputs), using a deep learning pipeline combining Convolutional Neural Networks (CNN) for spatial feature extraction and Bidirectional Gated Recurrent Units (Bi-GRU) for sequential modeling.
+This project presents a deep learning approach to **Online Handwritten Mathematical Expression Recognition (HMER)** using a hybrid model of **Convolutional Neural Networks (CNN)** and **Bidirectional Gated Recurrent Units (Bi-GRU)**. The goal is to accurately recognize complex handwritten math expressions in real time.
 
-# 📌 Project Highlights
-## 🧮 Objective: Recognize complex handwritten mathematical expressions from online input using deep learning.
+---
 
-## 🧠 Architecture:
+## 📌 Project Highlights
 
-**CNN Layers:** Extract meaningful spatial features from input images.
+- **Objective**: Recognize handwritten mathematical expressions from online inputs (images or stroke data).
+- **Architecture**:
+  - **CNN Layers** for spatial feature extraction.
+  - **Bi-GRU Layers** for sequence modeling in both forward and backward directions.
+  - **CTC Loss** to handle sequence alignment without pre-segmented data.
+- **Use Cases**:
+  - Digital note-taking and mathematical OCR.
+  - Education-based apps and smart classroom tools.
+  - Accessibility tools for converting handwritten math into LaTeX or readable text.
 
-**Bi-GRU Layers:** Capture contextual dependencies in both forward and backward directions for better sequence modeling.
+---
 
-**CTC Loss:** Handles variable-length sequences without explicit alignment between input and output.
+## 🏗️ Model Overview
 
-## 📊 Dataset: Trained on benchmark datasets such as CROHME 2014.
+- **Input**: Grayscale preprocessed images of handwritten math expressions.
+- **Feature Extractor**: CNN with multiple convolutional and pooling layers.
+- **Sequence Learner**: Bi-GRU for contextual understanding of symbol sequence.
+- **Decoder**: Connectionist Temporal Classification (CTC) for flexible prediction without alignment.
 
-## 💡 Use Cases:
+---
 
-Educational tools for math learning apps.
-Digital note-taking software.
-Math OCR for scanned handwritten content.
+## 🔧 Tech Stack
 
-
-# 🏗️ Model Overview
-
-**Input:** Preprocessed grayscale images of handwritten math expressions.
-**CNN Block:** Series of convolutional layers to extract low- to high-level features.
-**Bi-GRU Block:** Models temporal dependencies for character/structure decoding.
-**CTC Layer:** Enables the model to learn without needing pre-segmented data.
+- **Language**: Python
+- **Libraries**: TensorFlow / Keras, NumPy, OpenCV
+- **Tools**: Jupyter Notebook / Google Colab
 
 
-# 🔧 Tech Stack
-
-**Language:** Python
-**Libraries:** TensorFlow / Keras, NumPy, Pandas, Matplotlib, OpenCV
-**Model:** CNN + Bi-GRU + CTC Loss
-**Tools:** Jupyter Notebook / Google Colab
